@@ -1,0 +1,51 @@
+name: bograph_causal_edp
+channels:
+  - defaults
+  - nvidia
+dependencies:
+  - pip
+  - python=3.8
+  - anaconda:psycopg2
+  - pytorch:pytorch
+  - conda-forge:pygraphviz
+#  - pytorch:cudatoolkit=11.3
+  - pip:
+    - nni
+    - nni[SMAC]
+    - causalnex
+    - botorch
+    - pyro-ppl
+    - dill
+    - numpy
+    - psutil
+    - typing
+    - pandas
+    - parameterized
+    - dataclasses-json
+    - dataclass-csv
+    - jupyter
+    - matplotlib
+    - seaborn
+    - dataclasses
+    - setuptools
+    - gpytorch
+    - scikit-learn
+    - tenacity
+    - docker
+    - tensorboard
+    - plotly
+    - kaleido
+    - torch
+    - networkx
+    - parameterized
+    - tqdm
+    - scipy
+    - timeout-decorator
+    - dacite
+    - paramiko
+    # Linters and type checkers
+    - flake8
+    - pyre-check
+    - black
+    - isort
+    - pylint

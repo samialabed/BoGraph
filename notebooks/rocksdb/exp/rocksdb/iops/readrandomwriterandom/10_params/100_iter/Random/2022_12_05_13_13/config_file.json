@@ -1,0 +1,126 @@
+{
+  "iterations": 100,
+  "opt_cfg": {
+    "opt_objectives": [
+      {
+        "name": "iops",
+        "opt_mode": "MAXIMIZE"
+      }
+    ],
+    "param_space": [
+      {
+        "max_background_compactions": {
+          "lower_bound": 1,
+          "upper_bound": 256
+        }
+      },
+      {
+        "max_background_flushes": {
+          "lower_bound": 1,
+          "upper_bound": 10
+        }
+      },
+      {
+        "write_buffer_size": {
+          "lower_bound": 12097152,
+          "upper_bound": 167772160
+        }
+      },
+      {
+        "max_write_buffer_number": {
+          "lower_bound": 1,
+          "upper_bound": 128
+        }
+      },
+      {
+        "min_write_buffer_number_to_merge": {
+          "lower_bound": 1,
+          "upper_bound": 32
+        }
+      },
+      {
+        "max_bytes_for_level_multiplier": {
+          "lower_bound": 5,
+          "upper_bound": 15
+        }
+      },
+      {
+        "block_size": {
+          "lower_bound": 32,
+          "upper_bound": 500000
+        }
+      },
+      {
+        "level0_file_num_compaction_trigger": {
+          "lower_bound": 1,
+          "upper_bound": 64
+        }
+      },
+      {
+        "level0_slowdown_writes_trigger": {
+          "lower_bound": 0,
+          "upper_bound": 1024
+        }
+      },
+      {
+        "level0_stop_writes_trigger": {
+          "lower_bound": 0,
+          "upper_bound": 1024
+        }
+      }
+    ],
+    "name": "Random",
+    "tuner_name": "Random"
+  },
+  "env_cfg": {
+    "bench_cfg": {
+      "name": "readrandomwriterandom",
+      "load_phase": null,
+      "run_phase": {
+        "benchmarks": {
+          "fillseq": false,
+          "fill100K": false,
+          "fillrandom": false,
+          "deleteseq": false,
+          "deleterandom": false,
+          "readseq": false,
+          "readrandom": false,
+          "readwhilewriting": false,
+          "readwhilemerging": false,
+          "updaterandom": false,
+          "appendrandom": false,
+          "mergerandom": false,
+          "filluniquerandom": false,
+          "mixgraph": false,
+          "readrandomwriterandom": true,
+          "sstables": false,
+          "levelstats": false,
+          "stats": true
+        },
+        "num": 13107200,
+        "duration": 0,
+        "statistics": true,
+        "value_size": 152,
+        "cache_size": 17179869184,
+        "threads": 8,
+        "batch_size": 1,
+        "benchmark_read_rate_limit": 0,
+        "benchmark_write_rate_limit": 0,
+        "use_existing_db": false,
+        "db": "/tmp/rocksdb",
+        "wal_dir": "/tmp/rocksdb/WAL_LOG",
+        "prefix_size": 0,
+        "key_size": 16,
+        "keys_per_prefix": 0,
+        "perf_level": 1,
+        "reads": -1,
+        "use_direct_io_for_flush_and_compaction": false,
+        "use_direct_reads": false
+      }
+    }
+  },
+  "debug": true,
+  "exp_dir": null,
+  "run_once": true,
+  "experiment_time": "2022_12_05_13_13"
+}

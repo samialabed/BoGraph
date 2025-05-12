@@ -1,0 +1,1 @@
+{"max_background_compactions": 36, "max_background_flushes": 2, "write_buffer_size": 79317334, "max_write_buffer_number": 19, "min_write_buffer_number_to_merge": 22, "max_bytes_for_level_multiplier": 11.74476498605908, "block_size": 54919, "level0_file_num_compaction_trigger": 41, "level0_slowdown_writes_trigger": 36, "level0_stop_writes_trigger": 469}

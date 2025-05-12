@@ -1,0 +1,54 @@
+"""
+shared_buffers: Sets the number of shared memory buffers used by the server.
+
+Unit: 8kB
+"""
+"""
+max_wal_size: was checkpoint_segment
+Write-Ahead Log / Checkpoints	Sets the WAL size that triggers a checkpoint.
+
+Unit: MB
+"""
+"""
+effective_cache_size: Sets the planner's assumption about the total size of
+the data caches. That is, the total size of the caches
+(kernel cache and shared buffers) used for PostgreSQL data files.
+This is measured in disk pages, which are normally 8 kB each.
+
+Unit: 8kB
+"""
+
+"""
+bgwriter_lru_maxpages: Background writer maximum number of LRU pages to
+flush per round.
+"""
+"""
+bgwriter_delay: Background writer sleep time between rounds.
+
+Unit: MS
+"""
+
+"""
+checkpoint_completion_target:  Time spent flushing dirty buffers during checkpoint,
+as fraction of checkpoint interval.
+
+"""
+
+"""
+deadlock_timeout: Sets the time to wait on a lock before checking for deadlock.
+
+Unit: MS
+"""
+"""
+default_statistics_target Sets the default statistics target.
+This applies to table columns that have not had a column-specific target
+set via ALTER TABLE SET STATISTICS.
+"""
+"""
+effective_io_concurrency: Number of simultaneous requests that can be
+handled efficiently by the disk subsystem.
+
+"""
+"""
+checkpoint_timeout: Sets the maximum time between automatic WAL checkpoints.
+"""

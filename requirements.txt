@@ -1,0 +1,42 @@
+nni
+nni[SMAC] # also needs to install swig either with apt or brew
+botorch
+pyro-ppl
+dill
+numpy
+psutil
+typing
+pandas
+plotly
+kaleido
+# for testing
+parameterized
+# Formating and type checks
+pyre-check
+black
+black[jupyter]
+flake8
+dataclasses-json
+dataclass-csv
+jupyter
+matplotlib
+seaborn
+dataclasses
+setuptools
+torch
+gpytorch
+scikit-learn
+tenacity
+docker
+tensorboard
+networkx
+tqdm
+scipy
+causalnex
+pygraphviz
+timeout-decorator
+psycopg2
+dacite
+
+# ssh support for docker
+paramiko

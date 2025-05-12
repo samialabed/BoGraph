@@ -1,0 +1,188 @@
+{
+  "iterations": 50,
+  "opt_cfg": {
+    "opt_objectives": [
+      {
+        "name": "iops",
+        "opt_mode": "MAXIMIZE"
+      }
+    ],
+    "param_space": [
+      {
+        "max_background_compactions": {
+          "lower_bound": 1,
+          "upper_bound": 256
+        }
+      },
+      {
+        "max_background_flushes": {
+          "lower_bound": 1,
+          "upper_bound": 10
+        }
+      },
+      {
+        "write_buffer_size": {
+          "lower_bound": 12097152,
+          "upper_bound": 167772160
+        }
+      },
+      {
+        "max_write_buffer_number": {
+          "lower_bound": 1,
+          "upper_bound": 128
+        }
+      },
+      {
+        "min_write_buffer_number_to_merge": {
+          "lower_bound": 1,
+          "upper_bound": 32
+        }
+      },
+      {
+        "max_bytes_for_level_multiplier": {
+          "lower_bound": 5,
+          "upper_bound": 15
+        }
+      },
+      {
+        "block_size": {
+          "lower_bound": 32,
+          "upper_bound": 500000
+        }
+      },
+      {
+        "level0_file_num_compaction_trigger": {
+          "lower_bound": 1,
+          "upper_bound": 64
+        }
+      },
+      {
+        "level0_slowdown_writes_trigger": {
+          "lower_bound": 0,
+          "upper_bound": 1024
+        }
+      },
+      {
+        "level0_stop_writes_trigger": {
+          "lower_bound": 0,
+          "upper_bound": 1024
+        }
+      }
+    ],
+    "name": "BoTorch_SingleTaskGP",
+    "surrogate_model": "SingleTaskGP()",
+    "acquisition_function": "<super: <class 'MCAcquisitionFunctionWrapperABC'>, <qExpectedImprovementWrapper object>>, sampler: SobolQMCNormalSampler(), drawn_samples: torch.Size([1024])",
+    "random_iter": 5,
+    "retry": 1,
+    "seed": null,
+    "restore_from_checkpoint": false
+  },
+  "env_cfg": {
+    "bench_cfg": {
+      "name": "zippy_workload_15min",
+      "load_phase": {
+        "benchmarks": {
+          "fillseq": false,
+          "fill100K": false,
+          "fillrandom": true,
+          "deleteseq": false,
+          "deleterandom": false,
+          "readseq": false,
+          "readrandom": false,
+          "readwhilewriting": false,
+          "readwhilemerging": false,
+          "updaterandom": false,
+          "appendrandom": false,
+          "mergerandom": false,
+          "filluniquerandom": false,
+          "mixgraph": false,
+          "readrandomwriterandom": false,
+          "sstables": false,
+          "levelstats": false,
+          "stats": true
+        },
+        "num": 1000000,
+        "duration": 0,
+        "statistics": false,
+        "value_size": 43,
+        "cache_size": 268435456,
+        "threads": 1,
+        "batch_size": 1,
+        "benchmark_read_rate_limit": 0,
+        "benchmark_write_rate_limit": 0,
+        "use_existing_db": false,
+        "db": "/tmp/rocksdb",
+        "wal_dir": "/tmp/rocksdb/WAL_LOG",
+        "prefix_size": 0,
+        "key_size": 48,
+        "keys_per_prefix": 0,
+        "perf_level": 1,
+        "reads": -1,
+        "use_direct_io_for_flush_and_compaction": true,
+        "use_direct_reads": true
+      },
+      "run_phase": {
+        "benchmarks": {
+          "fillseq": false,
+          "fill100K": false,
+          "fillrandom": false,
+          "deleteseq": false,
+          "deleterandom": false,
+          "readseq": false,
+          "readrandom": false,
+          "readwhilewriting": false,
+          "readwhilemerging": false,
+          "updaterandom": false,
+          "appendrandom": false,
+          "mergerandom": false,
+          "filluniquerandom": false,
+          "mixgraph": true,
+          "readrandomwriterandom": false,
+          "sstables": false,
+          "levelstats": false,
+          "stats": true
+        },
+        "num": 5000000,
+        "duration": 900,
+        "statistics": true,
+        "value_size": 100,
+        "cache_size": 268435456,
+        "threads": 1,
+        "batch_size": 1,
+        "benchmark_read_rate_limit": 0,
+        "benchmark_write_rate_limit": 0,
+        "use_existing_db": true,
+        "db": "/tmp/rocksdb",
+        "wal_dir": "/tmp/rocksdb/WAL_LOG",
+        "prefix_size": 0,
+        "key_size": 48,
+        "keys_per_prefix": 0,
+        "perf_level": 1,
+        "reads": 42000000,
+        "use_direct_io_for_flush_and_compaction": true,
+        "use_direct_reads": true,
+        "keyrange_dist_a": 14.18,
+        "keyrange_dist_b": -2.917,
+        "keyrange_dist_c": 0.0164,
+        "keyrange_dist_d": -0.08082,
+        "keyrange_num": 30,
+        "value_k": 0.2615,
+        "value_sigma": 25.45,
+        "iter_k": 2.517,
+        "iter_sigma": 14.236,
+        "mix_get_ratio": 0.85,
+        "mix_put_ratio": 0.14,
+        "mix_seek_ratio": 0.01,
+        "sine_mix_rate_interval_milliseconds": 5000,
+        "sine_a": 100000,
+        "sine_b": 7.3e-07,
+        "sine_d": 450000
+      }
+    }
+  },
+  "debug": true,
+  "exp_dir": null,
+  "run_once": false,
+  "experiment_time": "2023_03_03_00_42",
+  "repeat": 1
+}

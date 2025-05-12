@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<parameters>
+
+    <!-- Connection details -->
+    <type>POSTGRES</type>
+    <driver>org.postgresql.Driver</driver>
+    <url>jdbc:postgresql://$ip_addr:$port/benchbase?sslmode=disable&amp;ApplicationName=ycsb&amp;reWriteBatchedInserts=true</url>
+    <username>$username</username>
+    <password>$password</password>
+    <isolation>TRANSACTION_READ_COMMITTED</isolation>
+    <batchsize>128</batchsize>
+
+    <!-- Scalefactor in YCSB is *1000 the number of rows in the USERTABLE-->
+    <scalefactor>$scale_factor</scalefactor>
+
+    <!-- The workload: https://github.com/cmu-db/ottertune/wiki/OLTPBenchmark-Configurations -->
+    <terminals>50</terminals>
+    <works>
+        <work>
+            <time>300</time>
+            <rate>unlimited</rate>
+            <weights>50,0,0,50,0,0</weights>
+            <skew>0.6</skew>
+        </work>
+    </works>
+
+    <!-- YCSB Procedures declaration -->
+    <transactiontypes>
+        <groupings>
+            <grouping>
+                <name>ycsb_a</name>
+                <weights>50,0,0,50,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_b</name>
+                <weights>95,0,0,5,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_c</name>
+                <weights>100,0,0,0,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_d</name>
+                <weights>95,5,0,0,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_e</name>
+                <weights>0,5,95,0,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_f</name>
+                <weights>50,0,0,0,0,50</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_7</name>
+                <weights>50,50,0,0,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_8</name>
+                <weights>75,0,0,25,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_9</name>
+                <weights>25,0,0,75,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_10</name>
+                <weights>50,0,25,25,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_11</name>
+                <weights>95,0,0,0,0,5</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_12</name>
+                <weights>85,5,0,10,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_13</name>
+                <weights>80,0,10,10,0,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_14</name>
+                <weights>90,5,0,0,5,0</weights>
+            </grouping>
+            <grouping>
+                <name>ycsb_15</name>
+                <weights>50,0,0,0,0,50</weights>
+            </grouping>
+        </groupings>
+        <transactiontype>
+            <name>ReadRecord</name>
+        </transactiontype>
+        <transactiontype>
+            <name>InsertRecord</name>
+        </transactiontype>
+        <transactiontype>
+            <name>ScanRecord</name>
+        </transactiontype>
+        <transactiontype>
+            <name>UpdateRecord</name>
+        </transactiontype>
+        <transactiontype>
+            <name>DeleteRecord</name>
+        </transactiontype>
+        <transactiontype>
+            <name>ReadModifyWriteRecord</name>
+        </transactiontype>
+    </transactiontypes>
+</parameters>

@@ -1,0 +1,5 @@
+{
+	"tls": false,
+	"hosts": ["tcp://0.0.0.0:2376", "unix:///var/run/docker.sock"]
+}
+

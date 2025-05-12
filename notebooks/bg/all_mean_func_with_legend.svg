@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1187.480797pt"
+   height="846.917985pt"
+   viewBox="0 0 1187.480797 846.917985"
+   version="1.1"
+   id="svg406"
+   sodipodi:docname="all_mean_func_with_legend.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   inkscape:export-filename="all_mean_func.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview406"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     inkscape:zoom="0.70462846"
+     inkscape:cx="1350.357"
+     inkscape:cy="486.78136"
+     inkscape:window-width="1728"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="figure_1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:date>2023-10-14T14:29:23.596732</dc:date>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Matplotlib v3.6.2, https://matplotlib.org/</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1">
+    <style
+       type="text/css"
+       id="style1">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+  </defs>
+  <g
+     id="figure_1">
+    <g
+       id="g1">
+      <g
+         id="legend_1">
+        <g
+           id="text_75"
+           transform="translate(0,-45)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.4px;line-height:normal;font-family:Arial;text-anchor:start;fill:#262626"
+             x="1107.2059"
+             y="389.83798"
+             id="text383">Legend</text>
+        </g>
+        <g
+           id="line2d_241"
+           transform="translate(0,-45)">
+          <path
+             d="m 1074.8291,404.1283 h 13.2 13.2"
+             style="fill:none;stroke:#db5f57;stroke-width:1.5;stroke-linecap:round;stroke-opacity:0.7"
+             id="path383" />
+        </g>
+        <g
+           id="text_76"
+           transform="translate(-1.5,-45)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.2px;line-height:normal;font-family:Arial;text-anchor:start;fill:#262626"
+             x="1111.7891"
+             y="408.74829"
+             id="text384">Zero</text>
+        </g>
+        <g
+           id="line2d_242"
+           transform="translate(0,-45)">
+          <path
+             d="m 1074.8291,422.80012 h 13.2 13.2"
+             style="fill:none;stroke:#91db57;stroke-width:1.5;stroke-linecap:round;stroke-opacity:0.7"
+             id="path384" />
+        </g>
+        <g
+           id="text_77"
+           transform="translate(-1.5,-45)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.2px;line-height:normal;font-family:Arial;text-anchor:start;fill:#262626"
+             x="1111.7891"
+             y="427.4201"
+             id="text385">Constant</text>
+        </g>
+        <g
+           id="line2d_243"
+           transform="translate(0,-45)">
+          <path
+             d="m 1074.8291,441.47193 h 13.2 13.2"
+             style="fill:none;stroke:#57d3db;stroke-width:1.5;stroke-linecap:round;stroke-opacity:0.7"
+             id="path385" />
+        </g>
+        <g
+           id="text_78"
+           transform="translate(-1.5,-45)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.2px;line-height:normal;font-family:Arial;text-anchor:start;fill:#262626"
+             x="1111.7891"
+             y="446.09192"
+             id="text386">Linear</text>
+        </g>
+        <g
+           id="line2d_244"
+           transform="translate(0,-45)">
+          <path
+             d="m 1074.8291,460.14374 h 13.2 13.2"
+             style="fill:none;stroke:#a157db;stroke-width:1.5;stroke-linecap:round;stroke-opacity:0.7"
+             id="path386" />
+        </g>
+        <g
+           id="text_79"
+           transform="translate(0,-45)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.2px;line-height:normal;font-family:Arial;text-anchor:start;fill:#262626"
+             x="1110.2891"
+             y="464.76373"
+             id="text387">Parametric</text>
+        </g>
+        <g
+           id="line2d_244-3"
+           style="stroke-linecap:butt;stroke-linejoin:round"
+           transform="translate(-0.29084544,-29.412272)">
+          <path
+             d="m 1074.8291,460.14374 h 13.2 13.2"
+             style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.4"
+             id="path386-8" />
+        </g>
+        <g
+           id="text_79-0"
+           style="stroke-linecap:butt;stroke-linejoin:round"
+           transform="translate(5.7091546,-26.412272)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.2px;line-height:normal;font-family:Arial;text-anchor:start;fill:#262626;stroke-linecap:butt;stroke-linejoin:round"
+             x="1104.2891"
+             y="461.76373"
+             id="text387-2"><tspan
+               sodipodi:role="line"
+               id="tspan407"
+               x="1104.2891"
+               y="461.76373"
+               dx="0 0 0 0 0 0 0 0 0">True Func</tspan></text>
+        </g>
+        <g
+           id="text_79-0-6"
+           style="stroke-linecap:butt;stroke-linejoin:round"
+           transform="translate(-3.5984454,-12.876875)">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.2px;line-height:normal;font-family:Arial;text-anchor:start;fill:#262626;stroke-linecap:butt;stroke-linejoin:round"
+             x="1113.2891"
+             y="463.26373"
+             id="text387-2-1"><tspan
+               sodipodi:role="line"
+               id="tspan407-2"
+               x="1113.2891"
+               y="463.26373">Observed</tspan></text>
+        </g>
+      </g>
+      <path
+         id="use275-9"
+         d="m 1090.9195,441.09064 -1.3065,4.02108 h -4.228 l 3.4205,2.48517 -1.3065,4.02109 3.4205,-2.48517 3.4206,2.48517 -1.3065,-4.02109 3.4205,-2.48517 h -4.228 z"
+         style="stroke:#ffffff;stroke-width:0.931099" />
+    </g>
+  </g>
+  <defs
+     id="defs406">
+    <clipPath
+       id="pe47fd1d783">
+      <rect
+         x="56.348525"
+         y="23.68275"
+         width="182.486052"
+         height="166.885"
+         id="rect387" />
+    </clipPath>
+    <clipPath
+       id="p44147fd994">
+      <rect
+         x="262.406592"
+         y="23.68275"
+         width="182.486052"
+         height="166.885"
+         id="rect388" />
+    </clipPath>
+    <clipPath
+       id="pf697f94eca">
+      <rect
+         x="468.46466"
+         y="23.68275"
+         width="182.486052"
+         height="166.885"
+         id="rect389" />
+    </clipPath>
+    <clipPath
+       id="pd6c04b98ee">
+      <rect
+         x="674.522727"
+         y="23.68275"
+         width="182.486052"
+         height="166.885"
+         id="rect390" />
+    </clipPath>
+    <clipPath
+       id="pca0f7a36c4">
+      <rect
+         x="880.580795"
+         y="23.68275"
+         width="182.486052"
+         height="166.885"
+         id="rect391" />
+    </clipPath>
+    <clipPath
+       id="p28a3853d06">
+      <rect
+         x="56.348525"
+         y="227.91975"
+         width="182.486052"
+         height="166.885"
+         id="rect392" />
+    </clipPath>
+    <clipPath
+       id="p9fdefa1bae">
+      <rect
+         x="262.406592"
+         y="227.91975"
+         width="182.486052"
+         height="166.885"
+         id="rect393" />
+    </clipPath>
+    <clipPath
+       id="pe6520bfa58">
+      <rect
+         x="468.46466"
+         y="227.91975"
+         width="182.486052"
+         height="166.885"
+         id="rect394" />
+    </clipPath>
+    <clipPath
+       id="p8a722def1c">
+      <rect
+         x="674.522727"
+         y="227.91975"
+         width="182.486052"
+         height="166.885"
+         id="rect395" />
+    </clipPath>
+    <clipPath
+       id="p8bcee85206">
+      <rect
+         x="880.580795"
+         y="227.91975"
+         width="182.486052"
+         height="166.885"
+         id="rect396" />
+    </clipPath>
+    <clipPath
+       id="pfe0961350a">
+      <rect
+         x="56.348525"
+         y="432.15675"
+         width="182.486052"
+         height="166.885"
+         id="rect397" />
+    </clipPath>
+    <clipPath
+       id="p6d777f3ff2">
+      <rect
+         x="262.406592"
+         y="432.15675"
+         width="182.486052"
+         height="166.885"
+         id="rect398" />
+    </clipPath>
+    <clipPath
+       id="p173621b2f9">
+      <rect
+         x="468.46466"
+         y="432.15675"
+         width="182.486052"
+         height="166.885"
+         id="rect399" />
+    </clipPath>
+    <clipPath
+       id="p1f1f407101">
+      <rect
+         x="674.522727"
+         y="432.15675"
+         width="182.486052"
+         height="166.885"
+         id="rect400" />
+    </clipPath>
+    <clipPath
+       id="p9e68449646">
+      <rect
+         x="880.580795"
+         y="432.15675"
+         width="182.486052"
+         height="166.885"
+         id="rect401" />
+    </clipPath>
+    <clipPath
+       id="pfdea06a211">
+      <rect
+         x="56.348525"
+         y="636.39375"
+         width="182.486052"
+         height="166.885"
+         id="rect402" />
+    </clipPath>
+    <clipPath
+       id="pcd5922c4b4">
+      <rect
+         x="262.406592"
+         y="636.39375"
+         width="182.486052"
+         height="166.885"
+         id="rect403" />
+    </clipPath>
+    <clipPath
+       id="p255e57b35a">
+      <rect
+         x="468.46466"
+         y="636.39375"
+         width="182.486052"
+         height="166.885"
+         id="rect404" />
+    </clipPath>
+    <clipPath
+       id="p616ed966b6">
+      <rect
+         x="674.522727"
+         y="636.39375"
+         width="182.486052"
+         height="166.885"
+         id="rect405" />
+    </clipPath>
+    <clipPath
+       id="p43f9238c47">
+      <rect
+         x="880.580795"
+         y="636.39375"
+         width="182.486052"
+         height="166.885"
+         id="rect406" />
+    </clipPath>
+  </defs>
+</svg>

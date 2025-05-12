@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<parameters>
+
+    <!-- Connection details -->
+    <type>POSTGRES</type>
+    <driver>org.postgresql.Driver</driver>
+    <url>jdbc:postgresql://$ip_addr:$port/benchbase?sslmode=disable&amp;ApplicationName=wikipedia&amp;reWriteBatchedInserts=true</url>
+    <username>$username</username>
+    <password>$password</password>
+    <isolation>TRANSACTION_READ_COMMITTED</isolation>
+    <batchsize>128</batchsize>
+
+    <!-- Scale factor is the number of wikipages *1000 -->
+    <scalefactor>$scale_factor</scalefactor>
+
+    <!-- The workload: https://github.com/cmu-db/ottertune/wiki/OLTPBenchmark-Configurations-->
+    <terminals>50</terminals>
+    <works>
+        <work>
+            <time>300</time>
+            <rate>unlimited</rate>
+            <weights>3,3,10,80,4</weights>
+        </work>
+    </works>
+
+    <!-- Wikipedia Procedures Declaration -->
+    <transactiontypes>
+        <transactiontype>
+            <name>AddWatchList</name>
+        </transactiontype>
+        <transactiontype>
+            <name>RemoveWatchList</name>
+        </transactiontype>
+        <transactiontype>
+            <name>UpdatePage</name>
+        </transactiontype>
+        <transactiontype>
+            <name>GetPageAnonymous</name>
+        </transactiontype>
+        <transactiontype>
+            <name>GetPageAuthenticated</name>
+        </transactiontype>
+    </transactiontypes>
+</parameters>

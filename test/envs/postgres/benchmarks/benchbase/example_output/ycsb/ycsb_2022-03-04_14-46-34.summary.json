@@ -1,0 +1,22 @@
+{
+ "scalefactor": "1",
+ "Current Timestamp (milliseconds)": 1646405194761,
+ "Benchmark Type": "ycsb",
+ "isolation": "TRANSACTION_SERIALIZABLE",
+ "DBMS Version": "PostgreSQL 14.2 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027, 64-bit",
+ "Goodput (requests/second)": 147.86592261520178,
+ "terminals": "1",
+ "DBMS Type": "POSTGRES",
+ "Latency Distribution": {
+  "95th Percentile Latency (microseconds)": 24745,
+  "Maximum Latency (microseconds)": 156033,
+  "Median Latency (microseconds)": 1387,
+  "Minimum Latency (microseconds)": 666,
+  "25th Percentile Latency (microseconds)": 1097,
+  "90th Percentile Latency (microseconds)": 21853,
+  "99th Percentile Latency (microseconds)": 59449,
+  "75th Percentile Latency (microseconds)": 3860,
+  "Average Latency (microseconds)": 6748
+ },
+ "Throughput (requests/second)": 147.84925603240026
+}

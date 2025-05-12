@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<parameters>
+
+    <!-- Connection details -->
+    <type>POSTGRES</type>
+    <driver>org.postgresql.Driver</driver>
+    <url>jdbc:postgresql://$ip_addr:$port/benchbase?sslmode=disable&amp;ApplicationName=noop&amp;reWriteBatchedInserts=true</url>
+    <username>$username</username>
+    <password>$password</password>
+    <isolation>TRANSACTION_SERIALIZABLE</isolation>
+    <batchsize>128</batchsize>
+
+    <!-- This parameter has no affect on this benchmark-->
+    <!-- There is no data to load -->
+    <scalefactor>$scale_factor</scalefactor>
+
+    <!-- The workload -->
+    <terminals>1</terminals>
+    <works>
+        <work>
+            <time>60</time>
+            <rate>1000</rate>
+            <weights>100</weights>
+        </work>
+    </works>
+
+    <!-- NoOp Procedures declaration -->
+    <transactiontypes>
+        <transactiontype>
+            <name>NoOp</name>
+        </transactiontype>
+    </transactiontypes>
+</parameters>
