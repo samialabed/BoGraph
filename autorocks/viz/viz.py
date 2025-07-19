@@ -1,4 +1,5 @@
 """ Contains all visualization helper functions. """
+import pathlib
 from typing import Dict, List, Optional, Set, Tuple, Union
 
 import matplotlib
@@ -17,25 +18,17 @@ from autorocks.data.loader.exp_dao import ModelsComparisonData
 from autorocks.utils.enum import ExtendedEnum
 from autorocks.viz.official_model_names import MODEL_NAME_MAPPING
 
-DPI = 600  # default dpi for most printers
-plt.style.use("ggplot")
-sns.set_theme(style="ticks", rc={"axes.spines.right": False, "axes.spines.top": False})
-sns.set_context("paper")  # , font_scale=1.5, rc={"lines.linewidth": 1.5})
-plt.rcParams["svg.fonttype"] = "none"
-plt.rcParams["font.family"] = "Arial"
-plt.rc("text", usetex=False)
-plt.rc("xtick", labelsize="small")
-plt.rc("ytick", labelsize="small")
-plt.rc("axes", labelsize="medium")
-plt.rc("pdf", use14corefonts=True)
-
-"""
-TODO:
-
-Provide a configuration file that set the
- colour scheme to use in all plots, as well as markers.
-
-"""
+_DEFAULT_OUTPUT_LOCATION = pathlib.Path("~/Workspace/latex_writings/thesis/phd_dissertation/Chapters/").expanduser()
+_CHAPTERS = {
+    "Background",
+    "Appendix",
+    "BoBn",
+    "BoGraph",
+    "BoGraphEval",
+    "Conclusion",
+    "Introduction",
+    "RelatedWork"
+}
 
 NUM = Union[float, int]
 
@@ -48,8 +41,8 @@ class OptimizationType(ExtendedEnum):
 def scatter_plot_params(
     model_comparison_data: ModelsComparisonData,
     comparison_col: str,
-    models_filter: Set[str] = None,
-    params_filter: Set[str] = None,
+    models_filter: Set[str] = set(),
+    params_filter: Set[str] = set(),
 ) -> Figure:
     """Helps understanding the impact of a parameter against an objective."""
     fig, ax = plt.subplots(figsize=(4, 3))
@@ -150,7 +143,7 @@ def model_perf_plot(
     yscale: Optional[str] = None,
     model_palette_map: Optional[Dict[str, _ColorPalette]] = None,
     ylabel: Optional[str] = None,
-    title: str = None,
+    title: str = "",
     horizontal_line: Optional[NUM] = None,
 ) -> Figure:
     """
@@ -194,7 +187,7 @@ def perf_boxplot(
     model_palette_map: Optional[Dict[str, _ColorPalette]] = None,
     ylabel: Optional[str] = None,
     yscale: Optional[str] = None,
-    title: str = None,
+    title: str = "",
     horizontal_line: Optional[Union[NUM, str]] = None,
     fig_size: Tuple[int, int] = (4, 3),
     add_roi: bool = False,
@@ -211,11 +204,14 @@ def perf_boxplot(
         .reset_index()
     )
 
-    if horizontal_line == "Default":
-        horizontal_line = perf_df[perf_df["model"] == "Default"][comparison_col].item()
-        perf_df = perf_df[perf_df["model"] != "Default"]
+    if isinstance(horizontal_line, str):
+      horizontal_line_str = horizontal_line
+      horizontal_line = float(perf_df[perf_df["model"] == horizontal_line_str][comparison_col].item())
+      perf_df = perf_df[perf_df["model"] != horizontal_line_str]
+      if model_palette_map:
         model_palette_map = model_palette_map.copy()
-        model_palette_map.pop("Default")
+        model_palette_map.pop(horizontal_line_str)
+
 
     # Order the plot by what minimize/maximize objective time ascending
     plot_order = cal_plot_order(
@@ -274,6 +270,7 @@ def _post_fig_processing(
     ), "Please provide either a label or a comparison col to infer the label from."
 
     if not ylabel:
+        assert comparison_col
         ylabel = comparison_col.replace("_", " ").capitalize()
     if yscale:
         ylabel = f"{ylabel} in {yscale} scale"
@@ -281,6 +278,7 @@ def _post_fig_processing(
     if title:
         ax.set_title(title)
     if horizontal_line:
+
         ax.axhline(horizontal_line, color="red", label="Default")
 
     ax.set(xlabel="Model", ylabel=ylabel)
@@ -313,7 +311,7 @@ def convergence_lineplot(
             df[df["model"] == horizontal_line][column_name].mean().item()
         )
         df = df[df["model"] != horizontal_line]
-        if horizontal_line in model_palette_map:
+        if model_palette_map and horizontal_line in model_palette_map:
             model_palette_map = model_palette_map.copy()
             model_palette_map.pop(horizontal_line)
 
@@ -681,3 +679,13 @@ def mobo_exploration_plot(
     plt.close()
 
     return fig
+
+
+def save_figure(*, filename: str, chapter: str, figure: Figure) -> None:
+    """Utility to save figures in multiple format."""
+    if chapter not in _CHAPTERS:
+        raise ValueError(f"Unknown chapter provided: {chapter}, supported chapters: {_CHAPTERS}")
+    for format in ['png', 'pdf', 'svg']:
+        output = _DEFAULT_OUTPUT_LOCATION / chapter / "Figures" / f"{filename}.{format}"
+        print("Saving: ", output)
+        figure.savefig(str(output), bbox_inches="tight", format=f"{format}")

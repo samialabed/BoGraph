@@ -4,20 +4,8 @@ import botorch.test_functions.base
 import gpytorch
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
 import torch
 from botorch import models, posteriors, utils
-
-plt.style.use("ggplot")
-sns.set_theme(style="ticks", rc={"axes.spines.right": False, "axes.spines.top": False})
-sns.set_context("paper")  # , font_scale=1.5, rc={"lines.linewidth": 1.5})
-plt.rcParams["svg.fonttype"] = "none"
-plt.rcParams["font.family"] = "Arial"
-plt.rc("text", usetex=False)
-plt.rc("xtick", labelsize="small")
-plt.rc("ytick", labelsize="small")
-plt.rc("axes", labelsize="medium")
-plt.rc("pdf", use14corefonts=True)
 
 
 def generate_data(

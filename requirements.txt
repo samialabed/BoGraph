@@ -1,7 +1,7 @@
 nni
 nni[SMAC] # also needs to install swig either with apt or brew
-botorch
-pyro-ppl
+botorch==0.7.3
+pyro-ppl==1.8.3
 dill
 numpy
 psutil
@@ -23,11 +23,10 @@ matplotlib
 seaborn
 dataclasses
 setuptools
-torch
+torch==1.13
 gpytorch
 scikit-learn
 tenacity
-docker
 tensorboard
 networkx
 tqdm
@@ -37,6 +36,7 @@ pygraphviz
 timeout-decorator
 psycopg2
 dacite
-
+isort
+pylint
 # ssh support for docker
 paramiko

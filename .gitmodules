@@ -1,0 +1,3 @@
+[submodule "sysgym"]
+	path = sysgym
+	url = git@github.com:samialabed/sysgym.git
